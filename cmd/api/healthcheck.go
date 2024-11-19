@@ -22,3 +22,7 @@ func testnew() int {
 func newcode() string {
 	return "rohan"
 }
+
+func msama() int {
+	return 7
+}
