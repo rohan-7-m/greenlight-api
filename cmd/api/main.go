@@ -25,7 +25,6 @@ type application struct {
 }
 
 func main() {
-
 	var cfg config
 
 	flag.IntVar(&cfg.port, "port", 4000, "API server port")
@@ -41,7 +40,8 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v1/healthcheck", app.healthcheckHandler)
-
+	var a string
+	fmt.Println(a)
 	srv := &http.Server{
 		Addr:         fmt.Sprintf(":%d", cfg.port),
 		Handler:      mux,
@@ -54,5 +54,4 @@ func main() {
 	logger.Printf("starting %s server on %s", cfg.env, srv.Addr)
 	err := srv.ListenAndServe()
 	logger.Fatal(err)
-
 }

@@ -10,3 +10,15 @@ func (app *application) healthcheckHandler(w http.ResponseWriter, r *http.Reques
 	fmt.Fprintf(w, "environment: %s\n", app.config.env)
 	fmt.Fprintf(w, "version: %s\n", version)
 }
+
+func (app *application) numberfunction() int {
+	return 1
+}
+
+func testnew() int {
+	return 2
+}
+
+func newcode() string {
+	return "rohan"
+}
