@@ -40,8 +40,8 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v1/healthcheck", app.healthcheckHandler)
-	var a string
-	fmt.Println(a)
+	/* 	var a string */
+	/* 	fmt.Println(a) */
 	srv := &http.Server{
 		Addr:         fmt.Sprintf(":%d", cfg.port),
 		Handler:      mux,
